@@ -1,0 +1,92 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+
+body{
+    /* height:100vh; */
+}
+.wrapper{
+    width: 100vw;
+    height:100vh;
+    background-image: url(https://images.unsplash.com/photo-1683309807616-b308d251cfd1?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: grid;
+    place-items: center;
+}
+
+.game-info{
+    border: 1rem solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+.tic-tac-toe{
+    /* margin-top: 10px; */
+    width: 90%;
+    max-width: 20rem;
+    border: 1rem solid rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2, .box4, .box5{
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.box3, .box6{
+    border-bottom: 2px solid black;
+}
+
+.box7, .box8{
+    border-right: 2px solid black;
+}
+
+.btn{
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    transform: translateX(-50%);
+    border: 1rem solid rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    padding: 0.5rem, 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.btn.active{
+    display: flex;
+}
+
+.win{
+    background-color: rgba(0, 255, 0, 0.3);
+}
